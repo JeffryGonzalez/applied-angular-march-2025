@@ -1,6 +1,7 @@
 import { Routes } from '@angular/router';
 import { BooksComponent } from './books';
 import { ListComponent } from './pages/list';
+import { StatsComponent } from './pages/stats';
 export const BOOK_ROUTES: Routes = [
   {
     path: '',
@@ -11,8 +12,8 @@ export const BOOK_ROUTES: Routes = [
         component: ListComponent,
       },
       {
-        path: '**',
-        redirectTo: 'list',
+        path: 'stats',
+        component: StatsComponent,
       },
     ],
   },
