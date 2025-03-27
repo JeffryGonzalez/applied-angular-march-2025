@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { PreloadingStrategy, Route } from '@angular/router';
 import { Observable, of } from 'rxjs';
 
@@ -7,5 +8,5 @@ export class CustomPreloadingStrategy extends PreloadingStrategy {
       return fn();
     }
     return of(null);
-  } //change for tgesting
+  }
 }
