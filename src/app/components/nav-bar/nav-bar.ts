@@ -44,6 +44,7 @@ export class NavBarComponent {
       label: 'Books Lab',
       href: 'books',
     },
+    //Test comment to see if commit works
     {
       href: 'counter',
       label: 'Counter Lab',
