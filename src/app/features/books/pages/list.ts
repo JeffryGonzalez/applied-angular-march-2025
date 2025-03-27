@@ -28,6 +28,7 @@ export type BookApiResponse = BookApiEntity[];
   styles: ``,
 })
 export class ListComponent {
+  //show books on the screen
   books = resource<BookApiResponse, unknown>({
     loader: () => fetch('/api/books').then((res) => res.json()),
   });
