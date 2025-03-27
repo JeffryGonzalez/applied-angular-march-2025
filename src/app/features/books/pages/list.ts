@@ -52,7 +52,9 @@ import { BookApiEntity } from '../models/BookApiEntity';
           aria-label="close sidebar"
           class="drawer-overlay"
         ></label>
-        <app-book-stats [books]="books()!" />
+        <div class="menu bg-base-200 text-base-content min-h-full w-80 p-4">
+          <app-book-stats [books]="books()!" />
+        </div>
       </div>
     </div>
   `,
