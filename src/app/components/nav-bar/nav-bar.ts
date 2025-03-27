@@ -50,7 +50,7 @@ export class NavBarComponent {
     },
     {
       href: 'lab-final',
-      label: 'lab',
+      label: 'Lab Final',
     },
   ]);
 }

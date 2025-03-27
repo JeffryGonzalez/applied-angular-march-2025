@@ -47,6 +47,10 @@ export const routes: Routes = [
       ),
   },
   {
+    path: 'lab-final',
+    loadChildren: () => import('./features/lab-final/lab.routes').then((r) => r.LAB_FINAL_ROUTES),
+  },
+  {
     path: '**',
     redirectTo: 'dashboard',
   },
