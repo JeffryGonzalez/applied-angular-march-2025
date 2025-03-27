@@ -21,11 +21,32 @@ const fakeLinks: ApiLink[] = [
     url: 'https://ngrx.io/docs',
     description: 'The official NGRX documentation',
   },
+  {
+    id: '4',
+    title: 'Angular Material',
+    url: 'https://material.angular.io/',
+    description: 'The official Angular Material documentation',
+    tags: ['angular', 'material'],
+  },
+  {
+    id: '5',
+    title: 'Angular CLI',
+    url: 'https://cli.angular.io/',
+    description: 'The official Angular CLI documentation',
+    tags: ['angular', 'cli'],
+  },
+  {
+    id: '6',
+    title: 'Angular Universal',
+    url: 'https://angular.io/guide/universal',
+    description: 'The official Angular Universal documentation',
+    tags: ['angular', 'universal'],
+  },
 ];
 
 export const LinkHandlers = [
   http.get('https://some-service.com/api/links', async () => {
-    await delay(3000);
+    await delay(1500);
     return HttpResponse.json(fakeLinks);
   }),
 ];

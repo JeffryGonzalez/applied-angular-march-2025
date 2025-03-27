@@ -1,13 +1,22 @@
-import { Component, ChangeDetectionStrategy } from '@angular/core';
-import { ListComponent } from './components/list';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
+import { SectionNavComponent } from '../../../shared/components/section-nav/section-nav';
 import { LinksDataService } from './services/links-data';
+import { LinksStore } from './services/links-store';
 
 @Component({
   selector: 'app-links',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  providers: [LinksDataService],
-  imports: [ListComponent],
-  template: ` <app-links-list /> `,
+  providers: [LinksDataService, LinksStore],
+  imports: [SectionNavComponent],
+  template: `
+    <app-section-nav
+      sectionName="Developer Resources"
+      [links]="[{ href: 'list', label: 'List' }]"
+    >
+    </app-section-nav>
+  `,
   styles: ``,
 })
-export class LinksComponent {}
+export class LinksComponent {
+  store = inject(LinksStore);
+}
