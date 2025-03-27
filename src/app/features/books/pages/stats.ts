@@ -4,7 +4,7 @@ import {
   input,
   computed,
 } from '@angular/core';
-import { BookApiEntity, BookApiResponse } from '../models/BookApiEntity';
+import { BookApiResponse } from '../models/BookApiEntity';
 import { StatsItemComponent } from './stats-item';
 
 @Component({

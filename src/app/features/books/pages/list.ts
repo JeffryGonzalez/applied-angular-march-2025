@@ -19,7 +19,7 @@ import { BookApiEntity } from '../models/BookApiEntity';
       <div class="drawer-content">
         <!-- Page content here -->
         <label for="stats-drawer" class="drawer-button btn btn-primary"
-          >Open drawer</label
+          >Open stats drawer</label
         >
       </div>
       <div class="drawer-side">
