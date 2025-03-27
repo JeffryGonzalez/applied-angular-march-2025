@@ -48,5 +48,9 @@ export class NavBarComponent {
       href: 'counter',
       label: 'Counter Lab',
     },
+    {
+      href: 'lab-final',
+      label: 'Lab Final',
+    },
   ]);
 }
