@@ -4,3 +4,11 @@
 }
 @plugin "@tailwindcss/forms";
 @plugin "@tailwindcss/typography";
+
+.clickable-header {
+  cursor: pointer;
+}
+
+.clickable-header:hover {
+  text-decoration: underline;
+}
