@@ -47,6 +47,13 @@ export const routes: Routes = [
       ),
   },
   {
+    path: 'counter-final',
+    loadChildren: () =>
+      import('./features/counter-lab-final/counter.routes').then(
+        (r) => r.COUNTER_ROUTES,
+      ),
+  },
+  {
     path: '**',
     redirectTo: 'dashboard',
   },
