@@ -1,4 +1,4 @@
-import { JsonPipe } from '@angular/common';
+import { NgIf, NgFor } from '@angular/common';
 import { Component, ChangeDetectionStrategy, resource } from '@angular/core';
 
 export type BookApiEntity = {
@@ -19,11 +19,33 @@ export type BookApiResponse = BookApiEntity[];
   standalone: true,
 
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [JsonPipe],
+  imports: [NgIf, NgFor],
   template: `
     <p>Book list</p>
-
-    <pre>    {{ books.value() | json }} </pre>
+    <div
+      class="overflow-x-auto rounded-box border border-base-content/5 bg-base-100"
+    >
+      <table class="table w-full">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Year</th>
+          </tr>
+        </thead>
+        <tbody>
+          <ng-container *ngIf="books.value() as bookList">
+            <tr *ngFor="let book of bookList">
+              <td>{{ book.id }}</td>
+              <td>{{ book.title }}</td>
+              <td>{{ book.author }}</td>
+              <td>{{ book.year }}</td>
+            </tr>
+          </ng-container>
+        </tbody>
+      </table>
+    </div>
   `,
   styles: ``,
 })
